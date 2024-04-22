@@ -54,14 +54,3 @@ print('remove=>', list1)
 list1.reverse() #리스트를 뒤집을때 사용
 print('reverse()=>', list1)
 
-'''
-List Comprehension
-    : 대괄호 안에 for루프로 반복적인 표현식을 실행해서
-    리스트 요소들을 초기화 하는 방법
-    형식]
-        [표현식 for 요소 in 컬렉션 [if조건식]]
-'''
-print("===List Comprehension", "="*30)
-#0~9까지의 정수중 3의배수의 제곱으로 이루어진 리스트 초기화
-list = [n ** 2 for n in range(10) if n%3==0]
-print(list)

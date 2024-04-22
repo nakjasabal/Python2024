@@ -15,18 +15,18 @@ num = 1
 result = f'{str}는 하루에 {num}잔만 마시는게 좋아요'
 print(result)
 
-# 정해진 공간에서 정렬
-s1 = '좌측정렬'
-result1 = f'|{s1:<10}|' 
+# 출력 범위 지정후 정렬
+str = '문자열처리'
+result1 = f'{str:<10}' 
 print(result1)
-
-s2 = '센터정렬'
-result2 = f'|{s2:^10}|'
+result2 = f'{str:^10}'
 print(result2)
-
-s3 = '우측정렬'
-result3 = f'|{s3:>10}|'
+result3 = f'{str:>10}'
 print(result3)
+
+# 출력 범위내 정렬 및 문자채우기
+result4 = f'{str:-^50}'
+print(result4)
 
 # 딕셔너리 사용
 dics = {'name':'성유겸', 'gender':'남자', 'age':10}

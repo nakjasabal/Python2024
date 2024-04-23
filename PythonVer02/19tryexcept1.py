@@ -40,7 +40,7 @@ calc([55,56,57]) #ZeroDivisionError가 발생되어 except: 에서 처리됨
 print('실행5')
 try:    
     #파일 읽기 
-    fp = open("PythonVer02/애국가.txt", mode="rt", encoding='utf-8') 
+    fp = open("애국가.txt", mode="rt", encoding='utf-8') 
     #파일을 읽기전용으로 오픈
     try:
         while True:
@@ -48,7 +48,7 @@ try:
             if not lines: break
             print(lines)
     finally:
-        print("더 이상 읽을 내용이 없습니다")
+        print("예외]더 이상 읽을 내용이 없습니다")
         fp.close()
 except IOError: #현재 파일이 없으므로 예외발생됨
-    print('파일이 없어 예외 발생')
+    print('예외]파일이 없습니다')

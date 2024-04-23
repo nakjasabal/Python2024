@@ -4,7 +4,7 @@ Built-in Function(내장함수)
     아무런 설정없이 바로 사용할수 있다. 
     int(), print(), max(), input()과 같은 함수가 있다.
 '''
-print(f'{'기본 내장 함수':-^30}')
+print(f"{'기본 내장 함수':-^30}")
 data1 = list(range(1,11)) 
 print(data1)
 print('len=', len(data1)) 
@@ -13,7 +13,7 @@ print('max=', max(data1))
 print('min=', min(data1))
 
 
-print(f'{'enumerate()':-^30}')
+print(f"{'enumerate()':-^30}")
 '''
 순서가 있는 자료형(리스트, 튜플, 문자열)을 입력받아 인덱스 값을 포함하는 enumerate객체를 반환한다. 
 '''
@@ -29,7 +29,7 @@ for i, v in enumerate(data2): #해당 객체의 인덱스와 값을 반환한다
 print()
 
 
-print(f'{'eval()':-^30}')
+print(f"{'eval()':-^30}")
 '''
 실행가능한 문자열을 입력받아 실행한 결과값을 반환한다. 
 '''
@@ -37,7 +37,7 @@ print(eval('1+2')) # 합의 결과 3 반환
 print(eval("'hi' + 'a'")) # 문자열이 연결되어 반환
 
 
-print(f'{'sorted()':-^30}')
+print(f"{'sorted()':-^30}")
 '''
 입력값을 정렬한 후 리스트로 반환한다. 
 '''
@@ -45,7 +45,7 @@ numbers = (8,7,6,8,4,9,7,5,3,2,7,4,9,8,2,6,5)
 print(sorted(numbers))
 
 
-print(f'{'이터레이터(iterator)':-^30}')
+print(f"{'이터레이터(iterator)':-^30}")
 '''
 값을 차례대로 꺼낼 수 있는 객체(object)이다. 
 for i in range(100): 와 같이 작성하면 파이썬은 0부터 99까지의 값을 

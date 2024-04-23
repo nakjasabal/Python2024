@@ -17,7 +17,7 @@ if문의 형식3
     else:
         위 모든 조건에 만족하지 않을때 실행문
 '''
-print("="*5, '비교연산자와 if문')
+print(f"{'비교연산자와 if문':-^30}")
 a, b, c = 10, 20, 30
 
 if a == c:
@@ -36,7 +36,7 @@ if a < b:
 논리and(곱)는 둘다 True(1)일때만 True를 반환한다. 하나라도 Fasle(0)이면 False를 반환한다. 
 1*1*0 = 0 즉 0이 하나만 곱해져도 결과는 0이된다. 
 '''
-print("="*5, '논리연산자 - 논리And')
+print(f"{'논리연산자 - 논리And':-^30}")
 print(True and True)
 print(True and False)
 print(False and False)
@@ -45,7 +45,7 @@ print(False and False)
 논리or(합)는 하나만 True라도 True를 반환한다. 둘다 Fasle일때만 False를 반환한다. 
 0+0+1 = 1 즉 1이 하나만 더해져도 결과는 1이된다. 
 '''
-print("="*5, '논리연산자 - 논리Or')
+print(f"{'논리연산자 - 논리Or':-^30}")
 print(True or True)
 print(True or False)
 print(False or False)
@@ -67,7 +67,7 @@ else:
     print('모든 조건에 만족하지 않습니다.')
 
 
-print("="*5, 'if~else문')
+print(f"{'if~else문':-^30}")
 age = 33
 # 여러개의 print()를 사용할때 한줄로 출력하고 싶다면 end=''를 사용한다.
 print(age, "살은 ", end="")
@@ -79,7 +79,7 @@ else:
     print("청년입니다.")
 print("==========================")
 
-print("="*5, '중첩된 if문')
+print(f"{'중첩된 if문':-^30}")
 # 사용자로부터 입력값을 받을때 input()을 사용한다.
 num1 = int(input("숫자 하나를 입력하세요 : "))
 if num1%2==0:
@@ -94,7 +94,7 @@ else:
         print("2와 3 모두 불가")
 
 
-print("="*5, '삼항연산자')
+print(f"{'삼항연산자':-^30}")
 #삼항연산자
 #if~else 문을 하나의 문장으로 표현할 수 있는 장점이 있다.
 number = 99
@@ -105,7 +105,7 @@ print(result)
 print("3의배수") if number%3==0 else print("3의배수아님")
 
 
-print("="*5, 'if~in문')
+print(f"{'if~in문':-^30}")
 countryList = ["태국","필리핀","괌","사이판","코타키나발루","발리","베트남"]
 journey = input("여행할 나라를 입력하세요:")
 if journey in countryList :

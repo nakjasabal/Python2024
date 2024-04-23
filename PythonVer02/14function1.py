@@ -5,7 +5,7 @@
             return 결과1, 결과2
     return문은 경우에 따라 생략가능함.
 '''
-print(f'{'함수정의 및 호출':-^30}')
+print(f"{'함수정의 및 호출':-^30}")
 def sumTen():
     sum = 0
     for i in range(1,11):
@@ -13,7 +13,7 @@ def sumTen():
     print('1~10까지의합:', sum)
 sumTen()
 
-print(f'{'함수정의 및 응용':-^30}')
+print(f"{'함수정의 및 응용':-^30}")
 # 메뉴출력 및 선택용 함수
 def menu():
     print('메뉴중 숫자를 선택하세요:')

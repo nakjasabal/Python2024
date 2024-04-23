@@ -16,7 +16,7 @@ mode : 파일열기 모드
 파일 객체는 반드시 열고 작업이 완료되면 닫아야한다.
 '''
 
-print(f'{'새파일01':-^30}')
+print(f"{'새파일01':-^30}")
 # 새로운 파일을 생성하여 반복문으로 내용 입력
 # wt : 읽기모드. 텍스트모드 
 f_open = open("새파일01.txt", mode='wt', encoding='utf-8')
@@ -43,7 +43,7 @@ f_add.write("마지막 라인입니다.")
 f_add.close()
 
 
-print(f'{'새파일02':-^30}')
+print(f"{'새파일02':-^30}")
 #자동으로 파일 객체 닫기 및 여러줄 쓰기/읽기
 #쓰기
 with open("새파일02.txt", mode='wt', encoding='utf-8') as myfile:

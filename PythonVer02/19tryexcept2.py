@@ -27,7 +27,7 @@ def print_gugudan(end_num):
         end_su = end_num + 1        
         for su in range(2,end_su):
             for dan in range(1,10):
-                print("%2d * %2d = %2d" % (su, dan, su*dan), end=' ')
+                print("%d * %d = %2d" % (su, dan, su*dan), end=' ')
             print()
         print()    
     except Exception as e:

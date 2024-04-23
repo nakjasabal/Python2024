@@ -11,7 +11,7 @@ str = '내 이름은 %s 입니다.' % '칸'
 print("str1=", str)
 
 # 리스트 사용
-names = ['유미', '간우', '쟝비']
+names = ['유비', '관우', '장비']
 for n in names:
     print('이름 : %s' % n)
 

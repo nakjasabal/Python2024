@@ -20,20 +20,20 @@ print('list2[2]:', list2[2])
 print('list3[2]:', list3[2]) #리스트내의 리스트가 출력됨. 
 
 #슬라이싱 
-print("===슬라이싱", "="*30)
+print(f"{'슬라이싱':-^30}")
 print('list1[1:4];', list1[1:4]) #인덱스 1~3까지 출력
 print('list1[:3];', list1[:3]) #0~2까지 출력
 print('list1[1:];', list1[1:]) #1~마지막까지 출력
 
 #list간의 연결이 가능함. 리스트내에 또다른 리스트를 삽입함. 
-print("===리스트 연결", "="*30)
+print(f"{'리스트 연결':-^30}")
 all_list = [list1, list2]
 print('all_list:', all_list)
 print('all_list[1][0]:', all_list[1][0]) #Java출력됨.
 
 
 #list 관련 메소드
-print("===list 관련 메소드", "="*30)
+print(f"{'list 관련 메소드':-^30}")
 list1.append(6) #추가
 print('append(6)=>', list1)
 

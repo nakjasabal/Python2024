@@ -2,7 +2,7 @@
 문자열 바꾸기
     replace('바꿀문자열', '새문자열')
 '''
-print("="*5, "replace()")
+print(f"{'replace()':-^30}")
 print('Hello, world!'.replace('world', 'Python'))
 
 s = 'Hello, world!'
@@ -16,7 +16,7 @@ print(s)
     maketrans('바꿀문자', '새문자')로 변환 테이블을 만든 후 적용한다. 
     아래 테이블은 a는 1, u는 5로 변경된다.
 '''
-print("="*5, "maketrans()/translate()", "="*20)
+print(f"{'maketrans()/translate()':-^30}")
 str1 = "apple"
 table = str1.maketrans('aeiou', '12345')
 print(str1.translate(table))
@@ -29,7 +29,7 @@ print(str2.translate(table))
 '''
 구분자과 문자열 리스트 연결하기
 '''
-print("="*5, "join()")
+print(f"{'join()':-^30}")
 print('-'.join(['010', '7906', '3600']))
 
 
@@ -38,7 +38,7 @@ print('-'.join(['010', '7906', '3600']))
     lstrip(왼쪽), rstrip(오른쪽), strip(양쪽)
     인자가 없으면 공백이 삭제된다. 
 '''
-print("="*5, "strip()")
+print(f"{'strip()':-^30}")
 str = "#^%오늘은 @@ 파이썬 @@ 공부하는날#^%"
 print(str.lstrip('#'))
 print(str.rstrip('%'))
@@ -49,6 +49,6 @@ print(str.rstrip('%').lstrip('#').replace('@', ''))
 열 위치 찾기
    find(왼쪽에서부터), rfind(오른쪽에서부터)
 '''
-print("="*5, "find()")
+print(f"{'find()':-^30}")
 print('apple pineapple'.find('pl'))
 print('apple pineapple'.rfind('pl'))

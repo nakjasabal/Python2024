@@ -16,13 +16,13 @@ class Person:
 p1 = Person('정우성', 39, 'qwer1234')
 print(p1.doEat())
 p1.doAge()
-
 #접근 가능하므로 정상 출력
 print('이름:', p1.name)
-
 #접근할 수 없어 에러 발생
 # print('패스워드:', p1.__passwd)
+#함수를 통해 간접적으로 접근해야 함
 print('패스워드:', p1.getPasswd())
+
 
 #자식클래스 선언 
 class Teacher(Person):
@@ -44,3 +44,4 @@ class Teacher(Person):
 p2 = Teacher('낙자', 40, '9876', 'Python')
 p2.teaching()
 p2.showPasswd()
+

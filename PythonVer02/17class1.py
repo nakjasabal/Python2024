@@ -36,9 +36,16 @@ class MyCalculator:
         result = (refCls.first + refCls.second) * otherNum
         print("결과:", result)
         print("연산횟수:", MyCalculator.calCount)
+    #출력을 도와주는 메서드
+    def __str__(self):
+        str = f'계산기 클래스 입니다.' \
+            f'first={self.first}, second={self.second}'
+        return str
+
 
 #인스턴스 변수 생성
 cal = MyCalculator(5, 9)
+print(cal)
 print('덧셈:', cal.calculate('+'))
 print('곱셈:', cal.calculate('*'))
 

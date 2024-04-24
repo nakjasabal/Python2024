@@ -22,3 +22,4 @@ curs.execute('select * from people')
 for(name, job, pay) in curs.fetchall():
     print(name, ':', job, ':', pay)
 
+print("전체 레코드 select 완료")

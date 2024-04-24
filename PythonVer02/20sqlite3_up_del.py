@@ -8,7 +8,7 @@ curs = conn.cursor() #커서생성
 '''
 #curs.execute("update people set pay=값 where name=값")
 curs.execute("update people set pay=? where name=?",
-    (9999, '곽재우95'))
+    (9999, '곽재우62'))
 
 '''
 시나리오] 급여가 1200인 레코드를 삭제(delete)하시오.

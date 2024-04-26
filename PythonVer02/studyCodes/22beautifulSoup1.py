@@ -1,6 +1,6 @@
 '''
 https://wikidocs.net/85739
-라이브러리 설치 필요함
+패키지 설치 필요함
 pip install requests
 pip install beautifulsoup4
 '''

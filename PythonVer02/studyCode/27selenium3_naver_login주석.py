@@ -33,9 +33,11 @@ driver.find_element(By.XPATH, '//*[@id="log.login"]').click()
 time.sleep(30)
 
 #메인화면으로 돌아오면 검색어를 입력한다. 
-driver.find_element(By.NAME, 'query').send_keys('비트코인')
+driver.find_element(By.NAME, 'query').send_keys('셀레니움')
 time.sleep(2)
 
 #검색 버튼을 눌러서 결과를 확인한다. 
 driver.find_element(By.CLASS_NAME, 'btn_search').click()
 time.sleep(10)
+
+

@@ -1,5 +1,9 @@
 import pandas as pd
 
+'''
+?로 표현된 결측치 때문인지 여기서는 mean()부터 에러가 발생됨.
+아나콘다 환경에서는 문제가 없었던것 같은데, 이유는 아직 발견하지 못함. 
+'''
 csvFilePath2 = 'resData/auto-mpg.csv'
 df = pd.read_csv(csvFilePath2, header=None)
 df.columns = ['mpg','cylinders','displacement','horsepower','weight',
@@ -32,10 +36,10 @@ unique_values = df['origin'].value_counts()
 print(unique_values)
   
 # 평균값 
-# print(df.mean())  
-# print(df['mpg'].mean())  
-# print(df.mpg.mean())
-# print(df[['mpg','weight']].mean()) 
+print(df.mean())  
+print(df['mpg'].mean())  
+print(df.mpg.mean())
+print(df[['mpg','weight']].mean()) 
 
 # 중간값 
 print(df.median())

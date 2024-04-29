@@ -10,7 +10,7 @@ days = 150 #숫자
 times = {'JAVA': 20, 'HTML': 2, 'Oracle': 10, 'Python': 3} #딕셔너리
  
 # 파일을 바이너리 쓰기(wb)로 오픈한다.
-with open('study.p', 'wb') as file:
+with open('./saveFiles/study.p', 'wb') as file:
     pickle.dump(name, file) #dump()를 통해 저장
     pickle.dump(days, file)
     pickle.dump(times, file)
@@ -20,7 +20,7 @@ with open('study.p', 'wb') as file:
 저장한 순서 그대로 복원한다. 
 '''
 # 파일을 바이러너 읽기 모드로 오픈한다. 
-with open('study.p', 'rb') as file:
+with open('./saveFiles/study.p', 'rb') as file:
     name = pickle.load(file)
     days = pickle.load(file)
     times = pickle.load(file)

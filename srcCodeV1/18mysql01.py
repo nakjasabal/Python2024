@@ -9,13 +9,12 @@ c:\> pip3 install pymysql
 import pymysql #모듈 임포트
 
 #DB연결
-conn = pymysql.connect(host='localhost', user='kosmo_user',
-                            password='1234', db='kosmo_db', 
-                            charset='utf8')
+conn = pymysql.connect(host='localhost', user='sample_user',
+            password='1234', db='sample_db', charset='utf8')
 '''
-                        레코드를 출력할때 cursorclass부분을 주석처리하면 튜플로 
-                        출력된다. 아래와같이 설정하면 딕셔너리로 출력된다. 
-                           , cursorclass=pymysql.cursors.DictCursor
+레코드를 출력할때 cursorclass부분을 주석처리하면 튜플로 
+출력된다. 아래와같이 설정하면 딕셔너리로 출력된다. 
+    , cursorclass=pymysql.cursors.DictCursor
 '''
 #커서생성
 curs = conn.cursor()

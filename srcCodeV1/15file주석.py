@@ -18,19 +18,19 @@ mode : 파일열기 모드
 
 
 print("="*30)
-print("새파일01.txt")
+print("내파일01.txt")
 print("="*30)
 
 # 새로운 파일을 생성하여 반복문으로 내용 입력
 # wt : 읽기모드. 텍스트모드 
-f_open = open("새파일01.txt", mode='wt', encoding='utf-8')
+f_open = open("./saveFiles/내파일01.txt", mode='wt', encoding='utf-8')
 for i in range(1, 21):
     data = "%d번째 줄입니다.\n" % i
     f_open.write(data)
 f_open.close()
 
 #파일 읽기 
-f_read = open("새파일01.txt", mode='rt', encoding='utf-8')
+f_read = open("./saveFiles/내파일01.txt", mode='rt', encoding='utf-8')
 while True:    
     line = f_read.readline() #파일 내용 한줄을 읽는다.
     if not line: break #더이상 읽을 내용을 없을때 반복문 탈출.
@@ -38,7 +38,7 @@ while True:
 f_read.close()
 
 #기존파일에 내용 추가하기 
-f_add = open('새파일01.txt', mode='at', encoding='utf-8')
+f_add = open('./saveFiles/내파일01.txt', mode='at', encoding='utf-8')
 #한줄을 추가한다. 개행문자가 없어 줄바꿈처리가 되지 않는다. 
 f_add.write("추가하는 내용입니다.") 
 #리스트를 인자로 여러줄의 내용을 추가한다. 
@@ -48,16 +48,16 @@ f_add.close()
 
 
 print("="*30)
-print("새파일02.txt")
+print("내파일02.txt")
 print("="*30)
 #자동으로 파일 객체 닫기 및 여러줄 쓰기/읽기
 #쓰기
-with open("새파일02.txt", mode='wt', encoding='utf-8') as myfile:
+with open("./saveFiles/내파일02.txt", mode='wt', encoding='utf-8') as myfile:
 	for i in range(1, 16):
 		data = "%d라인 입력합니다.\n" % i
 		myfile.write(data)
 #읽기
-with open("새파일02.txt", mode='rt', encoding='utf-8') as myfile:
+with open("./saveFiles/내파일02.txt", mode='rt', encoding='utf-8') as myfile:
 	line = None
 	while line != '':
 		line = myfile.readline()
@@ -72,13 +72,13 @@ with open("새파일02.txt", mode='rt', encoding='utf-8') as myfile:
 '''
 import pickle #모듈 임포트
  
-name = 'kosmo' # 문자열
+name = '종각' # 문자열
 age = 99    # 숫자
-address = '서울시 금천구 가산동'
+address = '서울시 종로구 관철동'
 times = {'JAVA': 20, 'HTML': 2, 'Oracle': 10, 'Python': 3} #딕셔너리
  
 # kosmo.p 파일을 바이너리 쓰기(wb)로 오픈한다.
-with open('kosmo.p', 'wb') as file:
+with open('./saveFiles/jong-ro.p', 'wb') as file:
     pickle.dump(name, file) #dump()를 통해 저장
     pickle.dump(age, file)
     pickle.dump(address, file)
@@ -89,7 +89,7 @@ with open('kosmo.p', 'wb') as file:
 저장한 순서 그대로 복원한다. 
 '''
 # 파일을 바이러너 읽기 모드로 오픈한다. 
-with open('kosmo.p', 'rb') as file:
+with open('./saveFiles/jong-ro.p', 'rb') as file:
     name = pickle.load(file)
     age = pickle.load(file)
     address = pickle.load(file)

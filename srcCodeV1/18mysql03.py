@@ -1,9 +1,7 @@
-
 import pymysql
 
-conn = pymysql.connect(host='localhost', user='kosmo_user',
-                            password='1234', db='kosmo_db', 
-                            charset='utf8')
+conn = pymysql.connect(host='localhost', user='sample_user',
+            password='1234', db='sample_db', charset='utf8')
 
 curs = conn.cursor()
 

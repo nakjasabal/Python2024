@@ -40,7 +40,7 @@ calc([55,56,57]) #ZeroDivisionError가 발생되어 except: 에서 처리됨
 print('실행5')
 try:    
     #파일 읽기 
-    fp = open("애국가.txt", mode="rt", encoding='utf-8') 
+    fp = open("./saveFiles/애국가.txt", mode="rt", encoding='utf-8') 
     #파일을 읽기전용으로 오픈
     try:
         while True:

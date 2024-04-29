@@ -1,8 +1,7 @@
 import pymysql
 
-conn = pymysql.connect(host='localhost', user='kosmo_user',
-                            password='1234', db='kosmo_db', 
-                            charset='utf8')
+conn = pymysql.connect(host='localhost', user='sample_user',
+            password='1234', db='sample_db', charset='utf8')
 
 curs = conn.cursor()
 # 긴 문자열 중간에 변수를 삽입할때 f를 접두어로 붙히고, {}를 사용한다.

@@ -34,9 +34,9 @@ print(result)
 
 
 #모듈을 나눠서 관리할때는 패키지를 사용한다.  
-import kosmo.mod3 
-kosmo.mod3.sum1To10() #패키지명까지 포함한 형태로 함수호출
+import commons.mod3 
+commons.mod3.sum1To10() #패키지명까지 포함한 형태로 함수호출
 
-from kosmo.mod3 import sum1To10
+from commons.mod3 import sum1To10
 sum1To10() #함수명 만으로 호출
     

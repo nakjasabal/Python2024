@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>투표 결과</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>투표 결과</h1>
+    <ul>
+        {% for option, count in votes.items() %}
+            <li>{{ option }}: {{ count }}표</li>
+        {% endfor %}
+    </ul>
+    <a href="/">다시 투표</a>
+</body>
+</html>

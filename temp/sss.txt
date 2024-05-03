@@ -1,0 +1,19 @@
+
+and
+<foreach>
+    wine=xx or grapeVarity=xx or country=xx
+</foreach>
+
+로제 / 프랑스 / 주정강화
+
+(wine=로제 or grapeVarity=로제 or country=로제)
+or
+(wine=프랑스 or grapeVarity=프랑스 or country=프랑스)
+or
+(wine=주정강화 or grapeVarity=주정강화 or country=주정강화)
+
+wine=레드 or wine=화이트 or wine=주정강화
+and 
+country=프랑스 or country=미국 ...
+and
+price between 30000 and 60000

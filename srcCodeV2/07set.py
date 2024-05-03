@@ -15,7 +15,8 @@ print(even_set)
 # 생성과 동시에 초기화한다. 이때 중복값은 제거된다. 
 # 딕셔너리와 같이 중괄호를 사용한다. 단 value가 없다. 
 odd_set = {1,3,5,7,9,7,5,3,1}
-print(odd_set)
+print('중복제거:', odd_set)
+print('크기:', len(odd_set))
 
 #set에서 추가 및 삭제를 위한 메소드 사용 
 myset = {1, 3, 5} # 초기화

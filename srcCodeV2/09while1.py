@@ -69,3 +69,15 @@ while True:
     if coffee == 0:
         print("커피가 다 떨어졌습니다. 판매를 중지합니다.")
         break
+
+'''
+시나리오] 로또 번호를 생성하는 프로그램을 작성하시오. 1~45 사이에서 중복되지 않는 숫자 6개를 추출하면된다. 
+'''
+import random
+lotto = set()
+while True:
+    rndNum = random.randint(1,45) 
+    lotto.add(rndNum)
+    if len(lotto) == 6:
+        break
+print("로또번호:", sorted(lotto))

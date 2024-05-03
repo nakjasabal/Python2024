@@ -1,52 +1,30 @@
-# 날짜와 시간 형식 데이터 다루기
-# https://docs.google.com/document/d/1LNBf1Lwl4j05WwN3OuHJl9eFT604NtGSmS6-hqXaC7Y/edit?usp=sharing
-import time
-from datetime import date, datetime, timedelta
+'''
+퀴즈] 올해 크리스마스까지 몇일이 남았는지 계산하는 프로그램을 작성하시오.
+-현재날짜가 크리스마스가 지난 시점이라면 내년 크리스마스까지의 날짜를 계산해야한다.
+-함수로 정의하시오. 
+-함수명 : days_until_christmas()
+'''
+from datetime import datetime
 
-today = date.today()
-# 2022-12-01 / 2022 / 12 / 1
-print(today, today.year, today.month, today.day)
+def days_until_christmas():
+    # 현재 날짜와 년도를 얻음
+    today = datetime.today()
+    current_year = today.year
+    
+    # 올해 크리스마스 날짜를 생성
+    christmas_date = datetime(current_year, 12, 25)
+    
+    # 오늘 날짜와 올해 크리스마스 날짜를 비교하여 크리스마스가 지나지 않았다면
+    if today > christmas_date:
+        # 올해 크리스마스가 이미 지났으면 내년 크리스마스까지의 날짜를 계산
+        christmas_date = datetime(current_year + 1, 12, 25)
+    
+    # 크리스마스까지 남은 날짜를 계산
+    days_left = (christmas_date - today).days
+    
+    return days_left
 
-print("="*30)
+# 크리스마스까지 남은 날짜 계산
+days_left = days_until_christmas()
+print(f"올해 크리스마스까지 남은 날짜: {days_left}일")
 
-dtime = datetime.now()
-# 2022-12-01 21:47:49.449218
-print(dtime)
-# 2022 12 1
-print(dtime.year, dtime.month, dtime.day)
-# 21 47 49 449218
-print(dtime.hour, dtime.minute, dtime.second, dtime.microsecond)
-
-print("="*30)
-
-one_day = timedelta(days=1)
-
-yesterday = today - one_day
-tomorrow = today + one_day
-print("어제와오늘", yesterday, tomorrow)
-
-date_diff = today - yesterday
-print("날짜차이", date_diff)
-
-date_str = today.strftime('%Y-%m-%d')
-print("형식지정", date_str)
-
-date1 = '2022-12-25'
-date2 = datetime.strptime(date1, '%Y-%m-%d')
-date3 = datetime.date(date2)
-# <class 'str'> <class 'datetime.datetime'> <class 'datetime.date'>
-print(type(date1), type(date2), type(date3))
-# 2022-12-25 2022-12-25 00:00:00 2022-12-25
-print(date1, date2, date3)
-
-date_diff = date3 - today
-print("크리스마스까지", date_diff)
-
-# 속으로 10초를 세어 맞히는 프로그램
-input("엔터를 누르고 10초를 셉니다.")
-start = time.time()
-input("10초후 다시 엔터를 눌러주세요.")
-end = time.time()
-result = end - start
-print("실제시간:%d초" % result)
-print("차이:%d초" % (result-10))

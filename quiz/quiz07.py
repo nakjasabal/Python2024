@@ -1,25 +1,12 @@
-# 타자 게임
-import random, time
+'''
+퀴즈] 속으로 10초를 세어 맞히는 프로그램을 작성하시오.
+'''
+import time
 
-word = ['cat', 'dog', 'fox', 'monkey', 'mouse', 'panda',
-        'flog', 'snake', 'wolf', 'lion']
-n = 1
-print('[타자게임] 준비되면 엔터')
-input()
+input("엔터를 누르고 10초를 셉니다.")
 start = time.time()
-quiz = random.choice(word)
-while n <= 5:
-    print("문제", n)
-    print(quiz)
-    answer = input()
-    if quiz == answer:
-        print('통과')
-        n = n + 1
-        quiz = random.choice(word)
-    else:
-        print('오타. 다시 입력.')
+input("10초후 다시 엔터를 눌러주세요.")
 end = time.time()
-et = end - start
-et = format(et, '.2f')
-
-print("타자시간:", et, "초")
+result = end - start
+print("실제시간:%d초" % result)
+print("차이:%d초" % (result-10))

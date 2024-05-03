@@ -9,9 +9,12 @@ list, tuple, dictionary, set 이 있다.
     시퀀스 자료형(Mutable 데이타 타입). 서로 다른 자료형의 항목으로 구성할수 있음.
     인덱싱, 슬라이싱, 연결, 반복 등 가능함.
 '''
+import random
+rndNum = random.randint(6,10) #6~10사이의 난수 생성
+
 #기본적인 선언과 사용법은 배열과 동일함.
 #선언
-list1 = [1,2,3,4,5]
+list1 = [1,2,3,4,5,rndNum] 
 list2 = ['Java', 'HTML', 'Python']
 list3 = [10, 20, ['Java', 'HTML', 'Python']]
 #출력
@@ -34,8 +37,9 @@ print('all_list[1][0]:', all_list[1][0]) #Java출력됨.
 
 #list 관련 메소드
 print(f"{'list 관련 메소드':-^30}")
-list1.append(6) #추가
-print('append(6)=>', list1)
+rndNum = random.randint(11,20) #11~20사이의 난수
+list1.append(rndNum) #추가
+print(f'append({rndNum})=>', list1)
 
 list1.clear() #항목 전체 삭제
 print('clear()=>', list1)
@@ -54,3 +58,5 @@ print('remove=>', list1)
 list1.reverse() #리스트를 뒤집을때 사용
 print('reverse()=>', list1)
 
+del list1[0]
+print('0번항목삭제후=>', list1)

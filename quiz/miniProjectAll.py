@@ -22,13 +22,15 @@ while True:
         print("{:-^50}".format(" 검색기능 "))
         searchFlag = False
         searchName = input("검색할성명>>> ")
-        print("{:^3}{:^10}{:^15}{:^20}".format("번호", "성명", "전화", "주소") )
+        print("{:^3}{:^10}{:^15}{:^20}"
+              .format("번호", "성명", "전화", "주소") )
         print("-"*53)
         i = 1
         for p in pList:
             if p['name'] == searchName:
                 searchFlag = True
-                print("{:^3}{:^10}{:^15}{:^20}".format(i+1,p["name"],p["phone"],p["addr"]))
+                print("{:^3}{:^10}{:^15}{:^20}"
+                      .format(i+1,p["name"],p["phone"],p["addr"]))
         if searchFlag == False:
             print('검색결과가 없습니다')
     elif no == 4 :
@@ -71,3 +73,15 @@ while True:
 
 # end of while
 print("프로그램종료~")
+
+
+
+
+
+
+
+
+
+
+
+

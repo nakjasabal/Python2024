@@ -14,10 +14,12 @@ while True:
         print("주소 입력 완료!")
     elif no == 2 :
         print("{:-^50}".format(" 출력기능 "))
-        print("{:^3}{:^10}{:^15}{:^20}".format("번호", "성명", "전화", "주소") )
+        print("{:^3}{:^10}{:^15}{:^20}"
+              .format("번호", "성명", "전화", "주소") )
         print("-"*53)
         for i, p in enumerate(pList) :
-            print("{:^3}{:^10}{:^15}{:^20}".format(i+1,p["name"],p["phone"],p["addr"]))
+            print("{:^3}{:^10}{:^15}{:^20}"
+                  .format(i+1,p["name"],p["phone"],p["addr"]))
     elif no == 3 :
         print("{:-^50}".format(" 검색기능 "))
     elif no == 4 :
@@ -34,3 +36,6 @@ while True:
 
 # end of while
 print("프로그램종료~")
+
+
+

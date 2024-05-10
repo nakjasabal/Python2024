@@ -6,6 +6,8 @@ pip install spacy
 python -m spacy download ko_core_news_sm
 
 
+질문 : 파이썬으로 자연어 처리 프로그램을 만들어줘
+
 위 코드에서는 입력된 텍스트를 nlp 객체로 분석하여 다양한 NLP 기능을 수행합니다. 코드의 각 부분 설명:
 
 토큰화 및 품사 태깅

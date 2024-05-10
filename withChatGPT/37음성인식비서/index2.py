@@ -1,7 +1,7 @@
 '''
 pip install pyttsx3
 
-
+음성을 인식해서 몇 가지를 동작하는 음성 인식 비서를 만들어줘
 '''
 
 import speech_recognition as sr

@@ -7,6 +7,10 @@ konlpy
 한글 자연어 처리를 위한 라이브러리
 한글 형태소 분석기를 제공하여，한글 문서에서 단어 단위로 분리하고 품사를 태깅할 수 있도록 도와줍니다. 
 pip install konlpy
+
+질문] 파이썬으로 한글을 자연어 처리 프로그램을 만들어줘
+
+자바가 설치되어 있어야 한다. 
 '''
 from konlpy.tag import Okt
 from nltk import FreqDist

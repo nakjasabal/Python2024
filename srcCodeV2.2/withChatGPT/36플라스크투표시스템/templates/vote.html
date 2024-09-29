@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>투표 시스템</title>
+</head>
+<body>
+    <h1>투표 시스템</h1>
+    <form action="/vote" method="post">
+        <p>투표 항목을 선택해주세요:</p>
+        {% for option, count in votes.items() %}
+            <input type="radio" name="option" value="{{ option }}" id="{{ option }}">
+            <label for="{{ option }}">{{ option }}</label><br>
+        {% endfor %}
+        <input type="submit" value="투표">
+    </form>
+</body>
+</html>

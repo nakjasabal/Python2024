@@ -79,20 +79,3 @@ print('remove=>', list1)
 list1.reverse()  
 print('reverse()=>', list1)
 
-
-
-'''
-List Comprehension
-    : 대괄호 안에 for문으로 반복적인 표현식을 실행해서 리스트 
-    원소들을 초기화하는 방식이다. 
-    형식]
-        [표현식 for 원소 in 컬렉션 [if조건식]]
-'''
-print("===List Comprehension", "="*30)
-'''
-    표현식(n의제곱) 반복문(0~9까지반복) 조건식(3의배수)
-    => 0~9까지의 정수 중 3의 배수인것만 찾아 제곱한 후 리스트를
-    초기화한다. 
-'''
-list = [n ** 2 for n in range(10) if n%3==0]
-print(list)

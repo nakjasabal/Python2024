@@ -9,7 +9,7 @@ range()
     형식]
         range(10) : 0~9까지
         range(2,10) : 2~9까지
-        range(2,10,2) : 2부터 2씩 증가
+        range(2,10,2) : 2~9까지 2씩 증가
 '''
 
 #0~4까지 반복됨
@@ -25,6 +25,9 @@ sum = 0
 for i in list1:
     sum += i
 print("1부터 10까지의 합 = ", sum)
+
+print()
+print("="*30)
 
 #문자열의 크기만큼 반복. 
 str1 = "파이썬이좋아요"
@@ -64,28 +67,3 @@ else:
 
 print()
 print("="*30)
-
-'''
-시나리오]1~100사이의 정수 중 3의 배수의 합을 구하시오.
-'''
-total = 0
-for i in range(1, 101):
-    if i % 3 == 0:
-        total += i
-        print(i, end='+')        
-print('\b', '=', total)
-
-print()
-print("="*30)
-
-
-'''
-List Comprehension
-    : 대괄호 안에 for루프로 반복적인 표현식을 실행해서
-    리스트 요소들을 초기화 하는 방법
-    형식]
-        [표현식 for 요소 in 컬렉션 [if조건식]]
-'''
-#0~9까지의 정수중 3의배수의 제곱으로 이루어진 리스트 초기화
-list = [n ** 2 for n in range(10) if n%3==0]
-print(list)

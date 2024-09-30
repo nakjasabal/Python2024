@@ -20,10 +20,12 @@ result5 = not (num1 > num2)
 print("관계식 판단의 부정", result5)
 
 
-#논리연산자
+#논리연산자 
 '''
-and : 두개의 조건이 모두 True일때만 True를 반환
+and(논리곱) : 두개의 조건이 모두 True일때만 True를 반환
+  논리곱이므로 1*1*0 = 0 즉 0이 하나만 곱해져도 결과는 0이된다. 
 or : 둘중 하나만 True이면, True를 반환
+  논리합이므로 0+0+1 = 1 즉 1이 하나만 더해져도 결과는 1이된다.
 not : 반대의 논리를 반환 
 '''
 logical1 = result1 and result2

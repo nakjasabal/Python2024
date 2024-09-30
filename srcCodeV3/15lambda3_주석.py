@@ -30,7 +30,6 @@ print('결과2', result)
 
 
 print(f"{'람다식과 filter함수':-^30}")
-powLambda = lambda y : y**2 #각 인자의 제곱의 결과를 반환하는 람다식
 list_data3 = [1,4,9,16,25,46,64,81,100]
 # 5초과 80미만인 요소일때만 true를 반환함.(해당 값만 필터링한다) 
 result = list(filter(lambda z: z>5 and z<80, list_data3)) 

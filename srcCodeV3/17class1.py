@@ -18,3 +18,4 @@ person1.justDoIt('야구')
 
 print(person2)
 person2.justDoIt('축구')
+

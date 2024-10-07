@@ -1,3 +1,7 @@
+'''
+break : 반복문을 즉시 탈출
+continue : 반복문의 처음으로 돌아가서 조건 확인
+'''
 repeat = 0
 while True:
     repeat += 1
@@ -11,5 +15,3 @@ while True:
     else:
         print("2와 7의 배수가 아니면 계속합니다.")
 print(f'전체반복횟수 : {repeat}')
-
-

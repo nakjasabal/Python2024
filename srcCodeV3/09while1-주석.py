@@ -1,4 +1,15 @@
 '''
+반복문 
+    : 파이썬에서의 반복문은 while문과 for문만 있다.
+    do~while문은 없다. 
+    형식]
+        초기값;
+        while 조건문:
+            수행할문장;
+            증감식;
+'''
+
+'''
 시나리오] 열번 찍어 안넘어가는 나무 없다라는 속담을 while문으로 구현하시오.
 '''
 treeHit = 0
@@ -12,14 +23,24 @@ print()
 print("="*30)
 
 str = 'python'
+# str이 공백이 될때까지 반복한다. 공백이 아니면 true
 while str: 
+    # 출력문 끝에 공백을 추가하여 줄바꿈없이 출력한다.
     print(str, end=' ')
+    '''
+    문자열에서 첫글자를 제거한 후 대입한다. 
+    인덱스 1부터 끝까지 슬라이싱 한다. 
+    '''
     str = str[1:] 
 
 print()
 print("="*30)
 
 # 시나리오] 1~10까지의 합을 구하시오.
+'''
+python에서는 while문에 else를 추가할수 있다. 
+while문의 조건에 위배되어 탈출하면 else구문이 실행된다.
+'''
 sum = 0
 i = 1
 while i<=10 :
@@ -30,6 +51,7 @@ while i<=10 :
         print(i, end=" = ")
     i += 1
 else:
+    #while문을 벗어나면 실행됨
     print(sum)
 
 print()
@@ -65,17 +87,3 @@ while True:
     if len(lotto) == 6:
         break
 print("로또번호:", sorted(lotto))
-
-
-
-
-
-
-
-
-
-
-
-
-
-

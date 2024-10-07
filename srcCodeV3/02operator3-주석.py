@@ -1,3 +1,5 @@
+
+#첫번째 숫자와 두번째 숫자를 입력
 num1 = float(input("첫번째 숫자를 입력하세요:"))
 num2 = float(input("두번째 숫자를 입력하세요:"))
 
@@ -19,12 +21,18 @@ print("관계식 판단의 부정", result5)
 
 
 #논리연산자 
+'''
+and(논리곱) : 두개의 조건이 모두 True일때만 True를 반환
+  논리곱이므로 1*1*0 = 0 즉 0이 하나만 곱해져도 결과는 0이된다. 
+or : 둘중 하나만 True이면, True를 반환
+  논리합이므로 0+0+1 = 1 즉 1이 하나만 더해져도 결과는 1이된다.
+not : 반대의 논리를 반환 
+'''
 logical1 = result1 and result2
 logical2 = result3 or result4
 logical3 = not (result3 or result4)
 
+#결과출력
 print('logical1', logical1)
 print('logical2', logical2)
 print('logical3', logical3)
-
-

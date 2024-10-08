@@ -52,3 +52,27 @@ print(str.rstrip('%').lstrip('#').replace('@', ''))
 print(f"{'find()':-^30}")
 print('apple pineapple'.find('pl'))
 print('apple pineapple'.rfind('pl'))
+
+
+'''
+문자열의 모든 문자가 숫자 또는 알파벳 또는 한글 이면 True 를 반환, 아니면 False 를 반환
+'''
+print(f"{'isalnum()':-^30}")
+str = 'python312좋아'
+print( str.isalnum() )
+ 
+str = 'python3.12좋아^^'
+print( str.isalnum() )
+
+'''
+시나리오] 입력한 문자열에 영문대문자, 소문자, 숫자만 포함되어 있다면 True, 나머지 문자가 하나라도 포함되면 False를 반환하는 프로그램을 작성하시오.
+'''
+print(f"{'시나리오':-^30}")
+s = input('문자열을 입력하세요:')
+result = True
+for char in s:
+    if not (char.isupper() or char.islower() or char.isdigit()):
+        result = False
+
+print(f"입력한 문자열: {s}")
+print("결과:%s" % result)

@@ -13,4 +13,3 @@ df.set_index('name', inplace=True)
 print(df)
 
 df.to_csv("../saveFiles/hakjum.csv")
-

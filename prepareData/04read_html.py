@@ -1,28 +1,30 @@
 # -*- coding: utf-8 -*-
-'''
-lxml 라이브러리
-
-'''
-
 import pandas as pd
 
-'''HTML파일의 경로 혹은 웹URL을 통해 읽어온 웹페이지의 표(table)을
-가져와서 데이터프레임으로 변환한다. '''
-# url ='../data/sample.html'
-url ='https://dhlottery.co.kr/gameResult.do?method=byWin'
+url ='../resData/sample.html'
 tables = pd.read_html(url)
 
-#테이블의 갯수를 확인한다. 
-print(len(tables))
+print('테이블갯수:', len(tables))
 
-#테이블의 갯수만큼 반복하여 출력한다. 
 for i in range(len(tables)):
-    print("tables[%s]" % i)
+    print("## tables[%s] ##" % i)
     print(tables[i])
-    print('\n')
+    print("="*30)
 
-#두번째 표를 변수에 저장한다. 
 df = tables[1] 
-#'name'열을 인덱스로 지정하고 기존 데이터프레임에 적용한다.     
 df.set_index(['name'], inplace=True)
 print(df)
+print("="*30)
+
+url ='https://pann.nate.com/talk/c20023?page=1'
+tables = pd.read_html(url)
+print('테이블갯수:', len(tables))
+print("="*30)
+
+boardTable = tables[0]
+print(boardTable)
+print("="*30)
+
+boardTable.columns = ['제목','작성자','조회수','작성일']
+print(boardTable)
+

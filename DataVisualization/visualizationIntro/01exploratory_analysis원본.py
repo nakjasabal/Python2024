@@ -76,7 +76,7 @@ print(unique_values)
         된다. 즉 집단2가 좀더 신뢰성이 높은 데이터라 할수있다. 
 '''
 # 평균값 
-print(df.mean())  
+# print(df.mean())
 print(df['mpg'].mean()) #연비의 평균값
 print(df.mpg.mean())
 print(df[['mpg','weight']].mean()) #2개 이상의 평균값 

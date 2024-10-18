@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import pandas as pd
+import matplotlib.pyplot as plt
 
 #엑셀을 데이터프레임으로 변환한다. 
 df = pd.read_excel('../resData/남북한_발전_전력량.xlsx', engine='openpyxl')  
@@ -15,25 +16,35 @@ df_ns = df.iloc[[0, 5], 3:]
 #남북한 데이터에 인덱스를 부여한다.             
 df_ns.index = ['South','North'] 
 #열 이름의 자료형을 정수형으로 변경한다.       
-df_ns.columns = df_ns.columns.map(int) 
+df_ns.columns = df_ns.columns.map(int)
+# 처음 5개 데이터 확인하기
 print(df_ns.head())
 
-#선 그래프1
+#선 그래프1(원본 데이터프레임)
 df_ns.plot()
+plt.show()
 
-#선 그래프2 
+#선 그래프2(전치한 데이터프레임)
 '''클래스 속성인 T를 이용해서 데이터프레임을 전치한다. 
 즉 행과 열을 바꾸는것을 말한다. 전치된 데이터를 통해 선
 그래프를 출력한다. '''
 tdf_ns = df_ns.T 
 print(tdf_ns.head())
 tdf_ns.plot()
+plt.show()
 
-#막대 그래프
+#막대 그래프1(원본 데이터프레임)
 df_ns.plot(kind='bar')
-tdf_ns.plot(kind='bar')
+plt.show()
 
- 
+#막대 그래프1(전치한 데이터프레임)
+tdf_ns.plot(kind='bar')
+plt.show()
+
+#히스토그램
+# tdf_ns.plot(kind='hist')
+# plt.show()
+
 
 
 

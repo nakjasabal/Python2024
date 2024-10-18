@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*- 
 import pandas as pd
+import matplotlib.pyplot as plt
+
+
 '''
 산점도 : 두 변수의 관계를 점으로 표현한 그래프
 박스플롯 : 특정 변수의 데이터 분포와 분산정도에 대한 정보를 제공하는
     그래프
 '''
 #자동차 연비 데이터를 데이터프레임으로 변환하고 컬럼을 지정한다. 
-df = pd.read_csv('../data/auto-mpg.csv', header=None)
+df = pd.read_csv('../resData/auto-mpg.csv', header=None)
 df.columns = ['mpg','cylinders','displacement','horsepower','weight',
               'acceleration','model year','origin','name']
 
@@ -16,6 +19,7 @@ df.columns = ['mpg','cylinders','displacement','horsepower','weight',
 즉 이 둘의 관계는 역(-)의 상관관계를 갖는다. 
 '''
 df.plot(x='weight', y='mpg', kind='scatter')
+plt.show()
 
 '''
 연비와 실린더 컬럼을 선택해서 박스플롯을 그린다. 
@@ -24,4 +28,4 @@ df.plot(x='weight', y='mpg', kind='scatter')
 범위에서 많이 벗어난 값을 말한다. 
 '''
 df[['mpg','cylinders']].plot(kind='box')
-
+plt.show()

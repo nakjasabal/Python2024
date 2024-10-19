@@ -19,18 +19,14 @@ df_ns.index = ['South','North']
 df_ns.columns = df_ns.columns.map(int)
 # 처음 5개 데이터 확인하기
 print(df_ns.head())
+print(df_ns.T.head())
 
 #선 그래프1(원본 데이터프레임)
 df_ns.plot()
 plt.show()
 
 #선 그래프2(전치한 데이터프레임)
-'''클래스 속성인 T를 이용해서 데이터프레임을 전치한다. 
-즉 행과 열을 바꾸는것을 말한다. 전치된 데이터를 통해 선
-그래프를 출력한다. '''
-tdf_ns = df_ns.T 
-print(tdf_ns.head())
-tdf_ns.plot()
+df_ns.T.plot()
 plt.show()
 
 #막대 그래프1(원본 데이터프레임)
@@ -38,12 +34,13 @@ df_ns.plot(kind='bar')
 plt.show()
 
 #막대 그래프1(전치한 데이터프레임)
-tdf_ns.plot(kind='bar')
+df_ns.T.plot(kind='bar')
 plt.show()
 
-#히스토그램
-# tdf_ns.plot(kind='hist')
-# plt.show()
+#히스토그램(전치한 데이터프레임)
+df_ns = df_ns.apply(pd.to_numeric, errors='coerce')
+df_ns.T.plot(kind='hist')
+plt.show()
 
 
 

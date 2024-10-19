@@ -41,7 +41,13 @@ plt.show()
 df_ns = df_ns.apply(pd.to_numeric, errors='coerce')
 df_ns.T.plot(kind='hist')
 plt.show()
-
+'''
+X축: 발전량(억㎾h)의 값들이 위치한 범위.
+Y축: 각 발전량 범위에 속하는 연도의 개수 (Frequency).
+남한과 북한의 막대: 각 구간에 속하는 남한과 북한의 연도별 
+발전량 빈도를 나타내며, 이를 통해 두 지역의 전력 발전량 분포를 
+비교할 수 있습니다.
+'''
 
 
 
